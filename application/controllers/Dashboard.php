@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 		$data = [
 			'title' => 'Dashboard',
 			'class' => 'class="hold-transition sidebar-mini layout-fixed"',
+			'menu'	=> 'dashboard'
 		];
 
 		$this->load->view('dashboard', $data);

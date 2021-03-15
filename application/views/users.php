@@ -7,17 +7,7 @@ define('TOP_ASSET', topAsset([
 	addPlugin("CSS_URL", [
 		'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'
 	]),
-	addPlugin("CSS", [
-		'tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
-		'icheck-bootstrap/icheck-bootstrap.min.css',
-		'jqvmap/jqvmap.min.css'
-	]),
 	addCss(['adminlte.min.css']),
-	addPlugin("CSS", [
-		'overlayScrollbars/css/OverlayScrollbars.min.css',
-		'daterangepicker/daterangepicker.css',
-		'summernote/summernote-bs4.css'
-	]),
 	addPlugin('CSS_URL', [
 		'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700'
 	])
