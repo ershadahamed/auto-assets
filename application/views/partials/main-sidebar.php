@@ -23,7 +23,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
+                    <a href="dashboard" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link <?= $menu == 'users' ? 'active' : '' ?>">
+                    <a href="users" class="nav-link <?= $menu == 'users' ? 'active' : '' ?>">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Users
