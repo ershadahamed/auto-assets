@@ -1,17 +1,31 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Users extends CI_Controller
+{
 
-	public function index()
-	{
-		$data = [
-			'title' => 'Dashboard',
-			'class' => 'class="hold-transition sidebar-mini"',
-            'menu'  => 'users'
-		];
 
-		$this->load->view('users', $data);
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('news_model');
+        $this->load->helper('url_helper');
+    }
 
+    public function index()
+    {
+        $data = [
+            'title' => 'Dashboard',
+            'class' => 'class="hold-transition sidebar-mini"',
+            'menu'  => 'users',
+            'news'  => $this->news_model->get_news(),
+        ];
+
+        $this->load->view('users', $data);
+    }
+
+    public function view($slug = NULL)
+    {
+        $data['news_item'] = $this->news_model->get_news($slug);
+    }
 }

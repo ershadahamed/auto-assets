@@ -195,37 +195,24 @@ $this->load->view('partials/header');
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped">
-                                    <thead>
+                                <table id="example1" class="table table-bordered table-striped table-sm">
+                                    <thead class="bg-dark">
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>Title</th>
+                                            <th>Body</th>
+                                            <th>Link</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php foreach ($news as $news_item): ?>
                                         <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 4.0
-                                            </td>
-                                            <td>Win 95+</td>
-                                            <td> 4</td>
-                                            <td>X</td>
+                                            <td><?= $news_item['title'] ?></td>
+                                            <td><?= $news_item['text'] ?></td>
+                                            <td><a href="<?= site_url('news/'.$news_item['slug']) ?>">View article</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 5.0
-                                            </td>
-                                            <td>Win 95+</td>
-                                            <td>5</td>
-                                            <td>C</td>
-                                        </tr>
+                                    <?php endforeach; ?>
                                     </tbody>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>Rendering engine</th>
                                             <th>Browser</th>
@@ -233,7 +220,7 @@ $this->load->view('partials/header');
                                             <th>Engine version</th>
                                             <th>CSS grade</th>
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                 </table>
                             </div>
                             <!-- /.card-body -->
